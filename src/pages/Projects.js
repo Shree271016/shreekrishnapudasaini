@@ -15,33 +15,50 @@ import ApiPhoto from "../../public/images/projects/Screenshot 2024-06-04 141555.
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article className=" relative rounded-br-2xl w-full flex items-center justify-between rounded-3xl border border-solid border-dark bg-light shadow-3xl p-8 ">
-      <div className="rounded-br-3xl absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark" />
+    <article className=" relative rounded-br-2xl w-full flex items-center justify-between rounded-3xl border border-solid border-dark dark:border-light dark:bg-dark bg-light shadow-3xl p-8 ">
+      <div className="rounded-br-3xl absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light" />
       <Link
         href={link}
         target="_blank"
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
       >
-        <Image src={img} alt={title} className="w-full h-full" />
+        <Image
+          src={img}
+          alt={title}
+          className="w-full h-full"
+          priority
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
+        />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-10">
-        <span className="text-primary font-medium text-2xl">{type}</span>
+        <span className="text-primary dark:text-primaryDark font-medium text-2xl">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-2  "
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold ">{title}</h2>
+          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light ">
+            {title}
+          </h2>
         </Link>
-        <p className="my-2 font-medium text-dark">{summary}</p>
+        <p className="my-2 font-medium text-dark dark:text-light">{summary}</p>
         <div className="mt-2 flex items-center">
-          <Link href={github} target="_blank" className="w-10" title="GitHub">
+          <Link
+            href={github}
+            target="_blank"
+            className="w-10 dark:text-light "
+            title="GitHub"
+          >
             <GithubIcon />
           </Link>
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-[rgb(0,126,106)] text-light p-2 px-6 text-lg  font-semibold  hover:bg-light hover:text-[rgb(0,126,106)] border-2 border-solid border-transparent hover:border-dark"
+            className="ml-4 rounded-lg bg-[rgb(0,126,106)] dark:bg-light text-light dark:text-[rgb(0,126,106)] hover:dark:bg-[rgb(0,126,106)] hover:dark:text-light p-2 px-6 text-lg  font-semibold  hover:bg-light hover:text-[rgb(0,126,106)] border-2 border-solid border-transparent hover:border-dark"
           >
             Visit Project
           </Link>
@@ -53,24 +70,36 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ title, type, img, link, github }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-between rounded-2xl border border-solid border-dark bg-light shadow-3xl p-6 relative">
-      <div className="rounded-br-3xl absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark" />
+    <article className="w-full flex flex-col items-center justify-between rounded-2xl border border-solid border-dark dark:border-light bg-light shadow-3xl p-6 relative dark:bg-dark">
+      <div className="rounded-br-3xl absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
 
       <Link
         href={link}
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <Image
+          src={img}
+          alt={title}
+          className="w-full h-auto"
+          priority
+          sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+        />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary font-medium text-2xl">{type}</span>
+        <span className="text-primary dark:text-primaryDark font-medium text-2xl">
+          {type}
+        </span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-2  "
         >
-          <h2 className="my-2 w-full text-left text-3xl font-bold ">{title}</h2>
+          <h2 className="my-2 w-full text-left text-3xl font-bold dark:text-light">
+            {title}
+          </h2>
         </Link>
 
         <div className="w-full flex items-center justify-between">
@@ -78,14 +107,14 @@ const Project = ({ title, type, img, link, github }) => {
             href={link}
             target="_blank"
             // className=" rounded-lg bg-[rgb(0,126,106)] text-light p-2 px-6 text-lg  font-semibold  hover:bg-light hover:text-[rgb(0,126,106)] border-2 border-solid border-transparent hover:border-dark"
-            className="text-xl font-semibold underline text-[rgb(0,126,106)]"
+            className="text-xl font-semibold underline text-[rgb(0,126,106)] dark:text-yellow-400 hover:dark:text-light"
           >
             Visit Project
           </Link>
           <Link
             href={github}
             target="_blank"
-            className="w-10 items-end "
+            className="w-10 items-end dark:text-light "
             title="GitHub"
           >
             <GithubIcon />
@@ -106,7 +135,7 @@ const Projects = () => {
         </div>
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center ">
-        <Layout className="pt-16">
+        <Layout className="pt-[80px]">
           <AnimatedText
             text="Imagination Trumps Knowledge !"
             className="mb-14"

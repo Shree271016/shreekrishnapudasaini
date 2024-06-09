@@ -27,7 +27,7 @@ const AnimatedNumbers = ({ value }) => {
         ref.current.textContent = latest.toFixed(0);
       }
     });
-  }, [springValue]);
+  }, [springValue, value]);
 
   return <span ref={ref}></span>;
 };
@@ -39,12 +39,12 @@ const about = () => {
         <title>Shree Krishna Pudasaini | About Page</title>
         <meta name="description" content="any description" />
       </Head>
-      <main className="w-full flex flex-col items-center justify-center">
-        <Layout className="pt-10">
+      <main className="w-full flex flex-col items-center justify-center dark:text-light">
+        <Layout className="pt-[90px]">
           <AnimatedText text="Passion Fuels Purpose !" className="mb-16" />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="col-span-3 flex flex-col items-start justify-start">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75">
+              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                 Biography
               </h2>
               <p className="font-medium ">
@@ -64,7 +64,7 @@ const about = () => {
               </p>
               <p
                 href=""
-                class="flex items-center text-indigo-700 border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex items-center"
+                class="flex items-center text-indigo-700 border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex "
               >
                 <span>
                   - I bring invaluable expertise to my current role.Provided
@@ -99,12 +99,16 @@ const about = () => {
                 adaptation to emerging technologies and challenges.
               </p>
             </div>
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 ">
-              <div className=" absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
+            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light">
+              <div className=" absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
               <Image
                 src={ProfilePic}
                 alt="Shree Krishna Pudasaini"
                 className="w-full rounded-2xl h-auto"
+                priority
+                sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
               />
             </div>
             <div className="col-span-2 flex flex-col items-end justify-between  ">
@@ -112,7 +116,7 @@ const about = () => {
                 <span className="inline-block text-7xl font-bold text-[rgb(0,126,106)]">
                   <AnimatedNumbers value={10} />+
                 </span>
-                <h2 className="text-2xl font-semibold capitalize text-[rgb(0,126,106)]">
+                <h2 className="text-2xl font-semibold capitalize text-[rgb(0,126,106)] dark:text-light/75">
                   Satisfied clients
                 </h2>
               </div>
@@ -120,7 +124,7 @@ const about = () => {
                 <span className="inline-block text-7xl font-bold text-[rgb(0,126,106)]">
                   <AnimatedNumbers value={10} />+
                 </span>
-                <h2 className="text-2xl font-semibold capitalize text-[rgb(0,126,106)]">
+                <h2 className="text-2xl font-semibold capitalize text-[rgb(0,126,106)] dark:text-light/75">
                   Projects Completed
                 </h2>
               </div>
@@ -128,7 +132,7 @@ const about = () => {
                 <span className="inline-block text-7xl font-bold text-[rgb(0,126,106)]">
                   <AnimatedNumbers value={3} />+
                 </span>
-                <h2 className="text-2xl font-semibold capitalize text-[rgb(0,126,106)]">
+                <h2 className="text-2xl font-semibold capitalize text-[rgb(0,126,106)] dark:text-light/75">
                   Years Of Experience
                 </h2>
               </div>
