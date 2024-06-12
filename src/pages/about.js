@@ -8,6 +8,7 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -39,6 +40,7 @@ const about = () => {
         <title>Shree Krishna Pudasaini | About Page</title>
         <meta name="description" content="any description" />
       </Head>
+      <TransitionEffect />
       <main className="w-full flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-[90px]">
           <AnimatedText text="Passion Fuels Purpose !" className="mb-16 lg:!text-7xl sm:!text-5xl xs:!text-3xl sm:my-6 md:my-8" />
@@ -64,7 +66,7 @@ const about = () => {
               </p>
               <p
                 href=""
-                class="flex items-center text-indigo-700 border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex "
+                class=" items-center text-indigo-700 border border-indigo-600 py-2 px-6 gap-2 rounded inline-flex "
               >
                 <span>
                   - I bring invaluable expertise to my current role.Provided
@@ -97,6 +99,20 @@ const about = () => {
                 🌟 Esteemed for exceptional collaboration skills, adept
                 communication of complex technical concepts, and rapid
                 adaptation to emerging technologies and challenges.
+    
+              </p>
+
+              <p className="font-medium">
+              💼 Distinguished by a unique amalgamation of academic acumen and technical prowess, offering unparalleled insights into the intricate intersections of technology and socio-political landscapes.
+              </p>
+              <p className="font-medium">
+              🛒 I successfully completed a MERN stack project for an E-commerce website, showcasing my expertise in creating dynamic and scalable web solutions.
+              </p>
+              <p className="font-medium">
+              🔍 Developed the Skillshore Quiz app using Formik and Yup validation, alongside advanced technologies such as Redux Toolkit, Redux Thunk, and TypeScript, demonstrating a commitment to continuous learning and innovation.
+              </p>
+              <p className="font-medium">
+              Eager to harness expertise in driving transformative projects and catalyzing positive change. Let's connect to explore collaborative ventures in pioneering initiatives.
               </p>
             </div>
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-4 md:col-span-6 md:items-center md:justify-center sm:col-span-8 md:order-1 ">

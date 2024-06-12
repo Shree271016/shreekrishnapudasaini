@@ -7,7 +7,7 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[75%] mx-auto flex flex-col items-center justify-between"
+      className="my-8 first:mt-0 last:mb-0 w-[75%] mx-auto flex flex-col items-center justify-between md:w-[85%]"
     >
       <LiIcon reference={ref} />
       <motion.div
@@ -15,13 +15,13 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl dark:text-primary ">
+        <h3 className="capitalize font-bold text-2xl dark:text-primary sm:text-xl xs:text-lg">
           {type}&nbsp;
         </h3>
-        <span className="capitalize font-medium text-dark/75 dark:text-light/75">
+        <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {time} | {place}
         </span>
-        <p className="font-medium w-full">{info}</p>
+        <p className="font-medium w-full md:text-sm">{info}</p>
       </motion.div>
     </li>
   );
@@ -35,15 +35,15 @@ const Education = () => {
 
   return (
     <div className="my-[160px]">
-      <h2 className="font-bold text-8xl mb-[100px] w-full text-center">
+      <h2 className="font-bold text-8xl mb-[100px] w-full text-center md:text-6xl xs:text-4xl md:mb-16">
         Education
       </h2>
-      <div ref={ref} className="w-[75%] mx-auto relative">
+      <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light"
+          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light  md:w-[2px] md:left-[30px] xs:left-[20px]"
         />
-        <ul className="w-full flex flex-col items-center justify-between ml-4">
+        <ul className="w-full flex flex-col items-center justify-between ml-4 xs:ml-2">
           <Details
             type="Front End Development BootCamp"
             time="Nov-2023  -  Feb-2024"
@@ -80,7 +80,7 @@ experience . Developed an e-commerce website using MERN stack, Bootstrap, and Ma
             time="May-2021"
             place="Tribhuvan University"
             info="
-           s an experienced MERN stack developer with a Master's degree in Political Science, I bring a distinct set of analytical, research, and communication talents to the IT industry. My expertise helps me understand complex data and create data-driven decisions, which I've used in projects involving massive datasets and user requirements analysis. Research skills allow for systematic problem solving, while great communication promotes efficient engagement with clients and teams. Understanding governance and ethics enables me to build responsible, user-centric products like civic engagement and e-government platforms. My interdisciplinary efforts demonstrate new answers to societal difficulties by integrating political and technical knowledge. My leadership and project management expertise, as well as a commitment to social impact, demonstrate my ability to develop meaningful, high-quality software solutions."
+           As an experienced MERN stack developer with a Master's degree in Political Science, I bring a distinct set of analytical, research, and communication talents to the IT industry. My expertise helps me understand complex data and create data-driven decisions, which I've used in projects involving massive datasets and user requirements analysis. Research skills allow for systematic problem solving, while great communication promotes efficient engagement with clients and teams. Understanding governance and ethics enables me to build responsible, user-centric products like civic engagement and e-government platforms. My interdisciplinary efforts demonstrate new answers to societal difficulties by integrating political and technical knowledge. My leadership and project management expertise, as well as a commitment to social impact, demonstrate my ability to develop meaningful, high-quality software solutions."
           />
           <Details
             type="LLB (Bachelor of Legislative Law)"
