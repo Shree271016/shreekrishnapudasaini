@@ -12,10 +12,11 @@ import calculator from "../../public/images/projects/1695661504806.jpeg";
 import flipCard from "../../public/images/projects/Screenshot 2024-06-04 133636.png";
 import photo from "../../public/images/projects/Screenshot 2024-06-04 135320.png";
 import ApiPhoto from "../../public/images/projects/Screenshot 2024-06-04 141555.png";
+import myPhoto from "../../public/images/projects/Screenshot 2024-06-13 134948.png"
 import TransitionEffect from "@/components/TransitionEffect";
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
-  return (  
+  return (
     <article className=" relative rounded-br-2xl w-full flex items-center justify-between rounded-3xl border border-solid border-dark dark:border-light dark:bg-dark bg-light shadow-3xl p-8 lg:flex-col le:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4 ">
       <div className="rounded-br-3xl absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]" />
       <Link
@@ -135,7 +136,7 @@ const Projects = () => {
           <meta name="description" content="any description" />
         </div>
       </Head>
-      <TransitionEffect/> 
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center ">
         <Layout className="pt-[80px]">
           <AnimatedText
@@ -213,6 +214,25 @@ At RK Juice and Fruit Store, we are passionate about delivering the finest quali
                 type="Featured project"
               />
             </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                title="My Portfolio with Next.js "
+                summary="I have created a stunning professional portfolio website using Next.js, Tailwind CSS, and Framer Motion.
+                        Features I've Implemented-Responsiveness: Ensured the website is fully responsive across all devices.
+                        Framer Motion- I added smooth and interactive animations with Framer Motion.
+                        Tailwind CSS- I styled my portfolio using utility-first CSS with Tailwind.
+                        Dark Mode- I implemented a sleek dark mode for a better user experience.
+                        Image Optimization: I optimized images for better performance using Next.js.
+                        Check out my visually appealing and highly optimized portfolio!"
+
+
+                link="https://shreekrishnapudasaini.com.np"
+                github="https://github.com/Shree271016/I-Am-Here-"
+                img={myPhoto}
+                type="Featured project"
+              />
+            </div>
+
             <div className="col-span-12">
               <FeaturedProject
                 title="Backend - Fruit shop App"
