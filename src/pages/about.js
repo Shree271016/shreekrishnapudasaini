@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import React, { useEffect, useRef } from "react";
 import AnimatedText from "../components/AnimatedText";
@@ -50,7 +51,7 @@ const about = () => {
                 Biography
               </h2>
               <p className="font-medium ">
-                - Hi, I'm Shree Krishna pudasaini, Passionate and dynamic IT
+                - Hi, I&apos;am Shree Krishna pudasaini, Passionate and dynamic IT
                 professional renowned for mastery in frontend development and an
                 expansive skill set spanning HTML, CSS, Bootstrap, Tailwind CSS,
                 JavaScript, React, Redux, TypeScript, MongoDB, Express.js,
@@ -112,7 +113,7 @@ const about = () => {
               🔍 Developed the Skillshore Quiz app using Formik and Yup validation, alongside advanced technologies such as Redux Toolkit, Redux Thunk, and TypeScript, demonstrating a commitment to continuous learning and innovation.
               </p>
               <p className="font-medium">
-              Eager to harness expertise in driving transformative projects and catalyzing positive change. Let's connect to explore collaborative ventures in pioneering initiatives.
+              Eager to harness expertise in driving transformative projects and catalyzing positive change. Let&apos;s connect to explore collaborative ventures in pioneering initiatives.
               </p>
             </div>
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light xl:col-span-4 md:col-span-6 md:items-center md:justify-center sm:col-span-8 md:order-1 ">
